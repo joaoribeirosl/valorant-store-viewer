@@ -7,13 +7,19 @@ class MarketStore = IMarketStore with _$MarketStore;
 abstract class IMarketStore with Store {
   final List<Map<String, String>> mockSkins = [
     {
-      'name': 'Vandal',
-      'image': 'https://skin-1',
+      'name': 'Elderflame Vandal',
       'price': '1775 VP',
     },
     {
-      'name': 'Phantom',
-      'image': 'https://skin-2',
+      'name': 'Prime Phantom',
+      'price': '1775 VP',
+    },
+    {
+      'name': 'Prime Phantom',
+      'price': '1775 VP',
+    },
+    {
+      'name': 'Prime Phantom',
       'price': '1775 VP',
     },
   ];

@@ -20,9 +20,35 @@ class MarketPageState extends State<MarketPage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
-        children: [],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Valorant Store'),
+        centerTitle: true,
+        backgroundColor: Colors.deepPurple,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          children: [
+            const SizedBox(height: 16),
+            Expanded(
+              child: ListView.builder(
+                itemCount: marketStore.mockSkins.length,
+                itemBuilder: (context, index) {
+                  final skin = marketStore.mockSkins[index];
+                  return Card(
+                    elevation: 4,
+                    margin: const EdgeInsets.symmetric(vertical: 8),
+                    child: ListTile(
+                      title: Text(skin['name']!),
+                      subtitle: Text(skin['price'].toString()),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
