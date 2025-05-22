@@ -8,6 +8,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
   await windowManager.setMaximumSize(const Size(400, 800));
+  await windowManager.setMinimumSize(const Size(400, 800));
   runApp(ModularApp(
     module: AuthModule(),
     child: const MainApp(),

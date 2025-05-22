@@ -24,7 +24,7 @@ class MarketPageState extends State<MarketPage> {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
+          onPressed: () => Navigator.pop(context),
         ),
         title: const Text('Valorant Store'),
         centerTitle: true,
