@@ -9,6 +9,10 @@ class LightTheme {
           textColor: primaryColorLigth, collapsedTextColor: primaryColorLigth),
       appBarTheme: const AppBarTheme(backgroundColor: primaryColorLigth),
       listTileTheme: const ListTileThemeData(textColor: primaryColorLigth),
+      textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(
+              foregroundColor:
+                  WidgetStateProperty.all<Color>(primaryColorLigth))),
       textTheme: const TextTheme(
         displaySmall: TextStyle(color: Colors.white),
         titleSmall: TextStyle(
